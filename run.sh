@@ -140,78 +140,16 @@ copyDir () {
 }
 
 ########### start script #########
-#checkConfig
-
-
-### insert config ####
-# Config file
-
-#########
-# Main info
-#
-# Give a label for this server`s backups
-SERVER_LABEL='codex-dev'
-#
-#########
-
-#########
-# Telegram bot config
-#
-CHAT_ID=''
-BOT_TOKEN=''
-#
-#########
-
-#########
-# Yandex Disk config
-#
-YADISK_TOKEN=''
-#
-#########
-
-#########
-# Redis
-#
-REDIS_PASSWORD=''
-# redis database usually located at /var/lib/redis/dump.rdb
-REDIS_DB_PATH='/var/lib/redis/dump.rdb'
-#
-#########
-
-#########
-# MySQL
-#
-MYSQL_USER="root"
-# this variable is not works
-MYSQL_PASSWORD=""
-#
-#########
-
-#########
-# MONGO
-#
-MONGO_HOST="localhost" #different when not on same server
-MONGO_PORT="27017" #could be different
-#
-#########
-
-###
-
-
-
-
-
+checkConfig
 
 
 SECONDS=0
 REPORT="Report for ${SERVER_LABEL} backup mission."$'\n\n'
 
 ##
-# Creating backup dir
+# Create backup dir
 #
-TEMP_DIR="temporary"
 mkdir $TEMP_DIR
-
 
 
 ######### REDIS #########
